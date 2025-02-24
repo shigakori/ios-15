@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 const Model = (props) => {
-    const { nodes, materials } = useGLTF('/models/scene.glb');
+    const { nodes, materials } = useGLTF('./models/scene.glb');
     const texture = props.item?.img ? useTexture(props.item.img) : null;
 
     useEffect(() => {
@@ -43,4 +43,4 @@ const Model = (props) => {
 
 export default Model;
 
-useGLTF.preload("/models/scene.glb");
+useGLTF.preload("./models/scene.glb");
